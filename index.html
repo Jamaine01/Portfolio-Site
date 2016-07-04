@@ -56,49 +56,24 @@
 		background-color: #54a135;
 		color: white;
 	}
-	#fcircles1 {
+	.fcircles1 {
 		height: 30px;
 		width: 30px;
 		background-color: #359ea1;
 		border-radius: 50%;
-		margin-left: 70%;
 		border: solid 3px #cecece;
 	}
-	#fcircles2 {
+	.fcircles2 {
 		height: 30px;
 		width: 30px;
 		background-color: #54a135;
 		border-radius: 50%;
-		margin: auto;
 		border: solid 3px #cecece;
 	}
-	#fcircles3 {
+	.fcircles3 {
 		height: 30px;
 		width: 30px;
 		background-color: #359ea1;
-		border-radius: 50%;
-		border: solid 3px #cecece;
-	}
-	#circles1 {
-		height: 30px;
-		width: 30px;
-		background-color: white;
-		border-radius: 50%;
-		margin-left: 70%;
-		border: solid 3px #cecece;
-	}
-	#circles2 {
-		height: 30px;
-		width: 30px;
-		background-color: #359ea1;
-		border-radius: 50%;
-		margin: auto;
-		border: solid 3px #cecece;
-	}
-	#circles3 {
-		height: 30px;
-		width: 30px;
-		background-color: white;
 		border-radius: 50%;
 		border: solid 3px #cecece;
 	}
@@ -115,6 +90,13 @@
 		width: 100px;
 		height: 100px;
 	}
+	/*added this class to use flex and space between. 
+	it will always adjust all content in this div to have equal
+	space-around each div*/
+	.circles {
+		display: flex;
+		justify-content: space-around;
+	}
 </style>
 
 
@@ -126,11 +108,9 @@
 <div class="container-fluid my_header">
 
 	<div class="row info">
-		<div class="col-md-3">
-			<h3>Jamaine Roseborough</h3>
-		</div>
-		<div class="col-md-4 col-md-offset-5">
-			<h3>Email: jroseborough01@gmail.com</h3>
+		<div class="col-sm-12">
+		<!-- here i used the pull-right class so your email will always be on the right side and changed the column to small-12 -->
+			<h3>Jamaine Roseborough <span class="pull-right">Email: jroseborough01@gmail.com</span></h3>
 		</div>
 	</div>
 
@@ -155,16 +135,12 @@
 	</div><br>
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4">
-			<div class="col-md-4">
-				<div id="fcircles1">
+			<div class="circles"><!--added this class div to contain the circles -->
+				<div class="fcircles1">
 				</div>
-			</div>
-			<div class="col-md-4 text-center">
-				<div id="fcircles2">
+				<div class="fcircles2">
 				</div>
-			</div>
-			<div class="col-md-4">
-				<div id="fcircles3">
+				<div class="fcircles3">
 				</div>
 			</div>
 		</div>
@@ -174,7 +150,7 @@
 			<h3 id="specs" style="color: #359ea1;">Background</h3>
 			<p style="color: #359ea1;"><!-- &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp -->I am Jamaine Roseborough, a young software developer. I graduated from the High School of Fashion Industries located in New York, recieving a CTE endorsed diploma. I also recieved my Adobe Photoshop certification there. I am now attending BMCC(Borough of Manhattan Community College), majoring in Engineering. After recieivng my Associates degree, I plan on attending CCNY(City College of New York) to complete my Bachelors in Engineering</p>
 		</div>
-		<div class="col-md-4 col-md-offset- as_me">
+		<div class="col-md-4 as_me">
 			<h3 id="specs" style="color: #359ea1;">Skills</h3>
 			<ul style="color: #359ea1; text-align: left;">
 				<li>Python (Back-end Development)</li>
@@ -205,16 +181,12 @@
 	</div><br>
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4">
-			<div class="col-md-4">
-				<div id="circles1">
+			<div class="circles"><!--added this class div to contain the circles -->
+				<div class="fcircles1">
 				</div>
-			</div>
-			<div class="col-md-4 text-center">
-				<div id="circles2">
+				<div class="fcircles2">
 				</div>
-			</div>
-			<div class="col-md-4">
-				<div id="circles3">
+				<div class="fcircles3">
 				</div>
 			</div>
 		</div>
@@ -245,16 +217,12 @@
 	</div><br>
 	<div class="row">
 		<div class="col-md-4 col-md-offset-4">
-			<div class="col-md-4">
-				<div id="fcircles1">
+			<div class="circles"><!--added this class div to contain the circles -->
+				<div class="fcircles1">
 				</div>
-			</div>
-			<div class="col-md-4 text-center">
-				<div id="fcircles2">
+				<div class="fcircles2">
 				</div>
-			</div>
-			<div class="col-md-4">
-				<div id="fcircles3">
+				<div class="fcircles3">
 				</div>
 			</div>
 		</div>
@@ -262,19 +230,21 @@
 	<div class="row text-center">
 		<div class="col-md-4 col-md-offset-2">
 			<div class="row">
-				<div class="col-md-6">
+			<!-- changed these columbs to col-sm-6 instead of medium so on small screens it keeps the same column spacing -->
+				<div class="col-sm-6">
 					<a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=jroseborough01@gmail.com&tf=1"><img src="https://cdn4.iconfinder.com/data/icons/happily-colored-snlogo/512/gmail-email-mail-logo-circle-material.png"></a>
 				</div>
-				<div class="col-md-6">
+				<div class="col-sm-6">
 					<a href="https://github.com/Jamaine01"><img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png"></a>
 				</div>
-			</div><br>
+			</div>
+			<br>
 			<div class="row">
-				<div class="col-md-6">
+				<div class="col-sm-6">
 					<a href="https://www.linkedin.com/in/jamaine-roseborough-a23109121
 					"><img src="http://icons.iconarchive.com/icons/martz90/circle/512/linkedin-icon.png"></a>
 				</div>
-				<div class="col-md-6">
+				<div class="col-sm-6">
 					<a href="http://www.pikore.com/roseboroughgraphics"><img src="https://cdn4.iconfinder.com/data/icons/social-icons-6/40/instagram-512.png"></a>
 				</div>
 			</div>
